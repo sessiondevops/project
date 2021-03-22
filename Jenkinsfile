@@ -81,7 +81,7 @@ pipeline {
 		stage("Deploy") {
 			steps {
 				script {
-					sh -x "/opt/tomcat/bin/startup.sh"
+					sh  "-x opt/tomcat/bin/startup.sh"
 				}
 			}
 		}
