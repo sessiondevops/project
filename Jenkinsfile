@@ -72,7 +72,7 @@ pipeline {
 				script {
 					def pom = readMavenPom file: ''
 					def workspace = WORKSPACE
-					sh "curl -iX GET 'http://18.218.212.62:9000/repository/mlive-Snapshot/com/marsh/${pom.artifactId}/${pom.version}/${pom.artifactId}-*.war' -o $workspace/${pom.artifactId}.war"
+					sh "curl -iX GET 'http://18.218.212.62:9000/repository/mlive-Snapshot/com/marsh/${pom.artifactId}/${pom.version}/mlive-0.0.1-20210322.061656-2.war' -o $workspace/${pom.artifactId}.war"
 					echo "Artifactes has been downloaded"
 					sh "mv $workspace/${pom.artifactId}.war /opt/tomcat/webapps/mlive.war"
 				}
