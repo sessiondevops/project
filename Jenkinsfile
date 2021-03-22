@@ -81,7 +81,7 @@ pipeline {
 		stage("Deploy") {
 			steps {
 				script {
-					sh "sudo systemctl start tomcat"
+					sh "/opt/tomcat/bin/startup.sh"
 				}
 			}
 		}
