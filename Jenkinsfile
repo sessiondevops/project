@@ -74,7 +74,7 @@ pipeline {
 					def workspace = WORKSPACE
 					sh "curl -iX GET 'http://18.218.212.62:9000/repository/et2-Snapshot/com/marsh/${pom.artifactId}/${pom.version}/${pom.artifactId}-*.war' -o $workspace/${pom.artifactId}.war"
 					echo "Artifactes has been downloaded"
-					sh "mv $workspace/${pom.artifactId}.war /var/lib/tomcat/webapps/mlive.war"
+					sh "mv $workspace/${pom.artifactId}.war /opt/tomcat/webapps/mlive.war"
 				}
 			}
 		}
