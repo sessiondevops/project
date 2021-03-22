@@ -81,8 +81,9 @@ pipeline {
 		stage("Deploy") {
 			steps {
 				script {
-					sh "export BUILD_ID=dontKillMe"
-					sh  "/opt/tomcat/bin/startup.sh"
+					keepRunning {
+						sh  "/opt/tomcat/bin/startup.sh"
+					}
 				}
 			}
 		}
